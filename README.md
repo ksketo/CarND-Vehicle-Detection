@@ -33,7 +33,7 @@ The SSD approach ([link](https://arxiv.org/pdf/1512.02325.pdf)) is based on a fe
 
 The architecture consists of some early network layers which are based on a standard architecture (VGG-16). This architecture is followed by convolutional feature layers which decrease in size progressively and allow predictions of detections at multiple scales. Each added feature layer can produce a fixed set of detection predictions using a set of convolutional filters. For a feature layer, the basic element for predicting parameters of a potential detection is a small kernel that produces either a score for a category, or a shape offset relative to the default box coordinates.
 
-### 2. Model training
+### 2. Model training
 
 The network has been initially trained on the Pascal VOC dataset. Training the network from scratch is a time consuming process, so I loaded the weights of the pre-trained SSD_300 which can be found [here](https://mega.nz/#F!7RowVLCL!q3cEVRK9jyOSB9el3SssIA). The weights were loaded into the Keras model whose implementation can be found in [this repo](https://github.com/rykov8/ssd_keras).
 
